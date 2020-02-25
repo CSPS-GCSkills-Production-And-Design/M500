@@ -1,0 +1,25 @@
+.table{ 
+	
+	thead{		
+		th{
+			text-align:center;
+			vertical-align:middle;
+			background-color:nth($toggle-colors, 1) !important;
+			border:thin solid white;		
+		}		
+	}	
+	
+	tbody{
+		th{
+			background-color:$secondary-color !important;
+			border:thin solid $secondary-color;
+		}
+		td{
+			border:thin solid #ccc;
+			vertical-align:middle; 
+			&:nth-child(2),&:nth-child(3){
+				text-align:center;
+			}
+		}
+	}
+}

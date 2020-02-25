@@ -1,0 +1,17 @@
+{
+  "name": "jobaid",
+  "version": "1.0.0",
+  "description": "jobaid",
+  "main": "index_en.html",
+  "scripts": {
+     "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "sass --watch theme/scss:theme/"
+  },
+  "keywords": [
+    "jobaid",
+    "Delegation",
+    "matrix"
+  ],
+  "author": "csps",
+  "license": "ISC"
+}

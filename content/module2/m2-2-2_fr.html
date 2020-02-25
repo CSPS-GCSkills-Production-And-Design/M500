@@ -1,0 +1,93 @@
+<!-- top banner with side-by-side underneath NEWSPAPER-->
+<section class="row">
+	<section class="col-md-12 LOM-frame " id="LOMfr_1">
+		<section class="LOM-element placeholder default " data-lom-element="text" id="LOM_el_1" data-lom-subtype="title">
+			<h1>
+				<div class="LOM-editable" id="LOM-edit-1">
+					<p>Autorités et agents</p>
+				</div>
+			</h1>
+			<!-- default Object, spawns an object picker --> 
+			
+		</section>
+	</section>
+</section>
+<section class="row">
+	<section class="col-md-8 LOM-frame " id="LOMfr_2">
+		<section class="LOM-element " data-lom-element="text" id="LOM_el_2"> 
+			<!-- This element is a plain Text area -->
+			<div class="LOM-editable" id="LOM-edit-2">
+				<p>Mis à part les organismes chargés d’examiner les plaintes concernant les marchés, des personnes, des groupes et des entités différents jouent un rôle essentiel pour ce qui est d’intensifier la surveillance des activités d’approvisionnement du gouvernement et d’assurer la prise en compte des préoccupations des contribuables. Leur but est également d’assurer l’ouverture, l’équité et la transparence dans les projets d’approvisionnement.</p>
+			</div>
+		</section>
+		<section class="LOM-element  circle-bundle click" data-lom-element="text" id="LOM_el_4">
+			<div class="LOM-editable" id="LOM-edit-3">
+				<p><strong>Sélectionnez chacun des éléments pour en apprendre davantage.</strong></p>
+			</div>
+		</section>
+		<section class="LOM-element " data-lom-element="custom" id="LOM_el_5">
+			<div class="accordion horizontal col-2" style="height: auto;">
+				<details>
+					<summary style="height: 95px;">
+						<div class="LOM-editable" id="LOM-edit-4">Autorités contractantes</div>
+						<span class="accordion_closed"></span></summary>
+					<div class="tgl-panel" style="min-height: 0px;">
+						<div class="LOM-editable" id="LOM-edit-6">
+							<p>On encourage les autorités contractantes à établir et à maintenir un mécanisme de contestation officiel pour toutes les propositions contractuelles, y compris celles qui relèvent du pouvoir du Ministère, celles envoyées à Services publics et Approvisionnement Canada (<abbr>SPAC</abbr>) et celles soumises au Conseil du Trésor. Ce mécanisme peut varier d’un comité d’examen central officiel à des groupes consultatifs de division ou régionaux, selon l’organisation gouvernementale et l’ampleur des marchés. Les décisions prises par ces unités d’examen devraient être consignées et disponibles pour des audits internes subséquents et pour les audits ou évaluations périodiques menés par le vérificateur général ou le Secrétariat du Conseil du Trésor.</p>
+						</div>
+					</div>
+				</details>
+				<details>
+					<summary style="height: 95px;">
+						<div class="LOM-editable" id="LOM-edit-7">Agents du Parlement</div>
+						<span class="accordion_closed"></span></summary>
+					<div class="tgl-panel" style="min-height: 0px;">
+						<div class="LOM-editable" id="LOM-edit-8">
+							<p>Indépendants du gouvernement et de la fonction publique, ces agents aident le Parlement à amener les ministres et la bureaucratie à assumer la responsabilité de dépenser l’argent des contribuables et à respecter les droits de la personne des Canadiens. Ils relèvent directement de la Chambre des communes et du Sénat.</p>
+						</div>
+					</div>
+				</details>
+			</div>
+		</section>
+	</section>
+	<section class="col-md-4 LOM-frame " id="LOMfr_3">
+		<section class="LOM-element " data-lom-element="image" id="LOM_el_3"> 
+			<!-- This element is a plain image --> 
+			<img src="content/medias/images/m2-2-3.jpg" class="img-responsive" alt=""> </section>
+	</section>
+</section>
+<section class="row">
+	<section class="col-md-12 LOM-frame " id="LOMfr_4">
+		<section class="LOM-element  circle-bundle click" data-lom-element="text" id="LOM_el_6">
+
+					<div class="LOM-editable" id="LOM-edit-5">
+						<p><strong>Sélectionnez chacun des cercles pour connaître le mandat de chaque mandataire et commissaire.</strong></p>
+					</div>
+
+		</section>
+		<section class="LOM-element" data-lom-element="custom" id="LOM_el_7">
+			<div class="clearfix"></div>
+			<div class="col-md-12 graph_m2-2-3_container">
+				<h2 class="text-center">
+					<div class="LOM-editable" id="LOM-edit-9">Le mandat de chaque mandataire et commissaire</div>
+				</h2>
+				<div class="col-md-8 col-md-offset-2">
+					<div class="graph_m2-2-3 ">
+						<div class="big_circle"> <a href="#glossary_Auditor_General" class="csps-glossary wb-lbx">Vérificateur général</a> <a href="#glossary_Information_Commissioner" class="csps-glossary wb-lbx">Commissaire à l’information</a> <a href="#glossary_Privacy_Commissioner" class="csps-glossary wb-lbx">Commissaire à la protection de la vie privée</a> <a href="#glossary_Commissioner_Lobbying" class="csps-glossary wb-lbx">Commissaire au lobbying</a> <a href="#glossary_Public_Integrity_Commissioner" class="csps-glossary wb-lbx">Commissariat à l’intégrité du secteur public</a> <a href="#glossary_Commissioner_Official_Languages" class="csps-glossary wb-lbx">Commissaire aux langues officielles</a> <a href="#glossary_Conflict_Interest_Ethics_Commissioner" class="csps-glossary wb-lbx">Commissaire aux conflits d’intérêts et à l’éthique</a>
+							<div class="inside hidden-xs"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</section>
+</section>
+<script>
+
+	$(document).on("wb-ready.wb-lbx", function(e){
+		if($(e.target).attr("href").indexOf("#glossary") != -1){
+			$(e.target).html('<span class="small_circle">' + $(e.target).html() + "</span>");
+		}
+	});
+
+</script>

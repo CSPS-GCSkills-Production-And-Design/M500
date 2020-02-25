@@ -1,0 +1,682 @@
+@import "./_fonts";
+@import "../scss/_vars";
+@import "../../common/scss/utils/_utils";
+   
+@import "./_mixins.scss";
+
+
+/***********     SPECIFIC PAGES / Content specific    ***********/ 
+.signature {
+    border: 0;
+    border-bottom: 1px solid #000;
+    width:100px;
+    display:inline-block;
+}  
+//m0-0
+.modIndex{
+	display:table;
+	#mod_m0-0_1{display:none;}
+	.module-info{		
+		padding-top: 1em;
+		display: block;
+		padding-bottom: 1.8em;	
+		padding-bottom:1em;		
+		text-decoration: none;	
+		color:black;		
+		//display:table;
+		h3{	color:black;}
+		
+		width:calc(25% - 4px);
+		margin-right:3px;
+		background-color:$secondary-color;
+		text-align:center;
+		color:black;		
+		&:hover,&:focus{
+			/*border:thin solid $secondary-color;
+			background-color:white;			
+			cursor:pointer;*/
+			
+			/*.modnum{				
+				background-color:$secondary-color;	
+			}*/
+		}
+		@include breakpoint-lt(medium) {    
+			width:50%;
+			float:left;
+			border-bottom:3px solid white;
+		}
+		@include breakpoint-lt(xxsmall) {    
+			width:100%;
+			float:left;
+			border-bottom:3px solid white;
+		}
+
+		.modnum{
+			width:47px;
+			height:47px;
+			border-radius:50%;
+			background-color:white;
+			display:inline-block;
+			line-height:2.3em;		
+			color:black;			
+		}
+		.mod-name{			
+			padding: 0 0.5em 0 0.5em;
+			display: inline-block;
+			width: 100%;
+		}
+		.mod-launch{	
+			font-size:0.75em;
+			@include triangle(right,black,0.25em);
+			&:after{right: -0.75em;}
+		}		
+	}
+} 
+$elements:7;	
+@for $i from 3 to $elements{
+	.module-info:nth-child(#{$i})	{
+		background-color:rgba($secondary-color, ( 1 - $i * 0.1 ));		
+	}
+}
+
+
+// m0-2
+
+.navigation_help{
+	height:2em;
+	margin: 0.25em;
+}
+
+//graph_m1-3-1
+.graph_m1-3-1_container{
+	background-color:$background-color;
+    padding: 2em 0 3em 0;    
+
+	&:before,&:after{		
+		position:absolute;		
+		content:'';					
+		height:100%;	
+		top:0;		
+	}
+	&:before{@include floating(left,$background-color);}
+	&:after{@include floating(right,$background-color);}
+		
+}
+
+@at-root html[lang='fr'] .graph_m1-3-1{
+	min-height:400px;
+	
+	.clients{
+		width: 40%;
+		
+		details summary::after{
+			top: -90px;
+		}
+	}
+	.contractors{
+		top: 20em;
+		
+		details summary::after{
+			top: -35%;
+		}
+	}
+	.engrenage{
+		p{
+			top:30%;
+		}
+		left:45%;
+		top:32%;		
+	}
+	@include breakpoint-gt(medium){			
+		.engrenage p{top:30%;}	
+	}		
+	@include breakpoint-lt(small){
+		.clients{width: 100%;}				
+		.engrenage{top: 15px;left: 0;}
+	}
+}
+.graph_m1-3-1{		
+	border:3px solid black; 
+	background-color:white;
+	min-height:310px;
+	position:relative;	
+	> div{
+		position:relative;
+		left:-3px;		
+	}
+	> div details{		
+		margin-bottom:5px;
+		summary{
+			border-left:3px solid black;
+			&:hover,&:focus{
+				background-color:black;
+				color:white;
+			}
+		}
+		&[open]{
+			background-color:black;
+			color:white;
+			summary{				
+				border-bottom:2px solid white;
+				background-color:black;
+				color:white;
+			}
+		}		
+	} 
+	.clients{
+		width: 33%;
+		position: absolute;
+		top: 28%;	
+		
+		details{
+			position:relative;
+			summary{
+				background-color:$secondary-color;
+				&:after{		
+					background-image:url('M500/m1-3_1.png');
+					position: absolute;
+					top: -75px;
+					right: -20.5%;
+					width: 30%;
+					padding-bottom: 31%;
+					height: 0;
+					background-repeat: no-repeat;
+					background-size: 100%;
+					content: '';	
+					@include breakpoint-lt(large){
+						top: -56px;
+					}
+					@include breakpoint-lt(small){
+						display:none;
+					}
+				}
+				@include breakpoint-lt(small){
+					border-left:none;
+				}
+			}
+			.tgl-panel p{
+				font-size: 14px;
+				
+				@media (max-width: 991px) and (min-width: 768px) {
+					font-size: 13px;
+				}
+			}
+		}	
+		@include breakpoint-lt(small){
+			position:relative;
+			width:100%;			
+			left: 0;
+			top:0;
+		}	
+	}
+	
+	.bidders{
+		width: 31.25%;    	
+		position:absolute;
+		top: 6em;
+		left:calc(68.75% + 3px);
+		details{
+			position:relative;
+			summary{
+				background-color:#a2b63b;
+				border-left:none;
+				border-right:3px solid black;
+				
+				&:before{		
+					background-image: url(M500/m1-3_2.png);
+					position: absolute;
+					top: -50%;
+					left: -30%;
+					width: 30%;
+					padding-bottom: 30%;
+					height: 0;
+					background-repeat: no-repeat;
+					background-size: 100%;
+					content: '';	
+					@include breakpoint-lt(small){
+						display:none;
+					}			
+				}
+				@include breakpoint-lt(small){
+					border-right:none;
+				}
+			}		
+		}
+		@include breakpoint-lt(small){
+			position:relative;
+			width:100%;			
+			left: 0;
+			top:0;			
+		}
+	}
+	.contractors{		
+		width: 42%;
+		position: absolute;
+		top: 15.55em;
+		left: -3px;
+		details{
+			position:relative;
+			summary{
+				background-color:#fdbe12;
+				&:after{		
+					background-image: url(M500/m1-3_3.png);
+					position: absolute;
+					top: -30%;
+					right:  -30%;
+					width: 30%;
+					padding-bottom: 17%;
+					height: 0;
+					background-repeat: no-repeat;
+					background-size: 100%;
+					content: '';
+					@include breakpoint-lt(small){
+						display:none;
+					}
+				}
+				@include breakpoint-lt(small){
+					border-left:none;
+				}
+			}
+		}
+		@include breakpoint-lt(small){
+			position:relative;
+			width:100%;			
+			left: 0;
+			top:0;
+		}
+	} 
+	.engrenage{
+		background-image: url(M500/m1-3_4.png);
+		position: absolute;
+		left: calc(50% - 85px);
+		left:40%;
+		top: 15%;
+		width: 18%;    	
+		padding-bottom:20%;
+		height: 0;
+		
+		content: '';
+		background-repeat: no-repeat;
+		background-size: 100%;
+		
+		text-transform: uppercase;
+		text-align: center;		
+		font-weight: bold;	
+		@include breakpoint-lt(large){
+			top:25%;
+		}		
+		@include breakpoint-lt(small){
+			position: relative;
+			top: 15px;
+			margin-bottom: 15px;
+			padding-bottom: 205px;
+			width: 190px;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			left: 0;			
+		}			
+		p{
+			position: absolute;
+			top: 36%;   			
+		    margin-right: 9%;
+    		margin-left: 9%;
+    		@include breakpoint-lt(xsmall){						
+				margin-left: 17%;
+				margin-right: 17%;
+				top: 44%;			
+			}
+			@include breakpoint-lt(xxsmall){	
+				margin-right: 9%;
+    			margin-left: 9%;
+				top: 36%;			
+			}
+
+		}
+	}
+
+	
+}
+
+
+//graph_m2-2-3
+
+.graph_m2-2-3_container{
+	padding:1em 0;
+	background-color:$background-color;
+	&:before,&:after{		
+		position:absolute;		
+		content:'';					
+		height:100%;	
+		top:0;		
+	}
+	&:before{@include floating(left,$background-color); }
+	&:after{@include floating(right,$background-color);}
+	@include breakpoint-lt(small){
+		margin-left:-25px;
+		margin-right:-25px;
+		padding-bottom:3em;
+	}
+}
+.graph_m2-2-3{
+	margin-top: 60px;
+    height: 0;
+    padding: 0;
+    padding-bottom: 60px;
+	background-color:$background-color;
+	height: 100%;
+	@include breakpoint-lt(xsmall){		
+    	padding-bottom: 0;
+	}
+    .big_circle{
+		padding-top:30px;
+		width: 600px;
+		height: 600px;
+		border-radius: 50%;
+		border: 6px dotted black;
+		box-shadow: 0 0 0 18px #a0b43b;
+		background: #a0b43b;
+		position: relative;
+		margin-left: auto;
+   		margin-right: auto;
+   		@include breakpoint-lt(small){
+   			width:400px;
+   			height:400px;
+   		}
+   		@include breakpoint-lt(xsmall){
+   			width: 0;
+			border-right: none;
+			border-bottom: none;
+			border-top: none;
+			border-radius: 0;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+   		}
+		.inside{
+			width: 550px;
+			height: 550px;
+			background-color: #bae7eb;
+			position: absolute;
+			top: 18px;
+			left: 18px;
+			border-radius: 50%;
+			@include breakpoint-lt(small){
+				width:350px;
+				height:350px;
+			}
+		}
+		.small_circle{
+			width:150px;
+			height:150px;
+			border:3px solid black;
+			background-color:white;
+			border-radius: 50%;
+			display: flex;
+    		align-items: center;
+    		justify-content: center;
+    		
+    		&:hover{
+    			background-color:black;
+    			color:white;
+    		}		
+    		@include breakpoint-lt(small){
+				font-size:0.8em;
+				width:125px;
+				height:125px;				
+			}	
+		}
+		a{
+			z-index: 1000;
+			text-align:center;
+			
+			&:after{
+				display: none;
+			}
+			
+			&:nth-child(1){
+				position: absolute;
+				top: -60px;
+				left: 200px;
+				@include breakpoint-lt(small){
+					left:125px;
+				}				
+				
+			}
+			&:nth-child(2){
+				position: absolute;
+				top: 30px;
+				left: 430px;
+				@include breakpoint-lt(small){
+					left: 271px;
+					top: 8px;
+				}	
+				
+			}
+			&:nth-child(3){
+				position: absolute;
+				top: 250px;
+				left: 510px;
+				@include breakpoint-lt(small){
+					left: 308px;
+  					top: 158px;
+				}	
+			}
+			&:nth-child(4){
+				position: absolute;
+				top: 450px;
+				left: 390px;
+				@include breakpoint-lt(small){
+					left: 260px;
+   					top: 308px;
+				}	
+			}
+			&:nth-child(5){
+				position: absolute;
+				top: 476px;
+    			left: 100px;
+    			@include breakpoint-lt(small){
+					top: 325px;
+					left: 75px;
+    			}	
+			}
+			&:nth-child(6){
+				position: absolute;
+				top: 300px;
+				left: -73px;
+				@include breakpoint-lt(small){
+    				top: 204px;
+    				left: -47px;
+    			}	
+			}
+			&:nth-child(7){
+				position: absolute;
+				top: 50px;
+				left: -30px;
+				@include breakpoint-lt(small){
+					top: 13px;
+				}
+				
+			}
+			@for $i from 1 to 8{
+				&:nth-child(#{$i})	{								
+					@include breakpoint-lt(xsmall){
+						position: relative;
+						top: initial;
+						left: initial;
+						margin-bottom: 15px;
+					}
+				}
+			}	
+					
+		}
+		
+	} 
+	
+}
+
+
+//graph_m3-1
+.graph_m3-1_container, .graph_m3-1_2_container{
+	background-color:$background-color;
+	padding-bottom: 25px;
+    padding-top: 25px;
+	
+	&:before,&:after{		
+		position:absolute;		
+		content:'';					
+		height:100%;	
+		top:0;		
+	}
+	&:before{@include floating(left,$background-color); }
+	&:after{@include floating(right,$background-color);}
+}
+.graph_m3-1{
+	border:3px solid black;
+	padding: 7% 3%;
+	margin-bottom:30px;
+	counter-reset: my-awesome-counter;
+	background-color:white;
+	
+	@include breakpoint-lt(medium){
+		padding: 7% 0%;
+	}
+	.circles{
+		
+		&:before,&:after{
+			background-image: url(M500/m3_1_hand.png);
+			content: '';
+			width: 11%;
+			height: 0;
+			padding-bottom: 26%;
+			background-repeat: no-repeat;
+			position: absolute;
+			bottom: 0;
+			background-size: 100%;		
+						
+		}
+		&:before{			
+			left:3%;
+			@include breakpoint-lt(medium){
+				left:1%;	
+			}
+		}
+		&:after{			
+			right:3%;
+			 -moz-transform: scaleX(-1);
+			-o-transform: scaleX(-1);
+			-webkit-transform: scaleX(-1);
+			transform: scaleX(-1);
+			filter: FlipH;
+			-ms-filter: "FlipH";
+			@include breakpoint-lt(medium){
+				right:1%;	
+			}
+		}
+		ol{
+			
+			display: flex;
+    		justify-content: center;
+    		font-weight:bold;
+    		padding-left: 0;
+    		@include breakpoint-lt(medium){
+				flex-direction:column;
+				align-items: center;
+			}	
+			li{
+				list-style:none;
+				float:left;
+				width:11%;		
+				font-size:0.8em;
+				text-align:center;	
+				@include breakpoint-lt(medium){						    
+				    width: 70%;
+					display: flex;
+					align-items: center;
+					align-content: space-between;
+					margin-left:auto;
+				}	
+				@include breakpoint-lt(small){
+					width:70%;	
+				}
+				@include breakpoint-lt(xxsmall){
+					width: 95%; 
+					margin-left:10%;
+				}
+				&:before{
+					counter-increment: my-awesome-counter;
+					content: counter(my-awesome-counter);
+					background-color:$secondary-color;
+					width:100%;
+					height:0;
+					padding-bottom:100%;					
+					text-align:center;
+					clear:both;
+					display:block;
+					border-radius:50%;
+					position:relative;					
+					color:white;
+					font-size:3em;
+					line-height:2.25em;					
+					margin-bottom:10px;
+					@include breakpoint-lt(medium){
+						line-height: 1.5em;
+						width: 60px;
+						padding-bottom: 60px;
+						margin-right: 3%;
+					}
+					@include breakpoint-lt(small){
+						line-height: 37px;
+						width: 40px;
+						padding-bottom: 40px;
+						margin-right: 1%;
+						font-size:19px;
+					}
+					
+
+					   
+				}
+				+ li{
+					margin-left:2%;	
+					@include breakpoint-lt(medium){margin-left:auto;}
+					@include breakpoint-lt(xxsmall){margin-left:10%;}
+				}
+			}	
+		} 
+	}
+}
+//graph_m3-1_2
+.my-svg{
+	display: block;
+    position: absolute;
+    top: 3%;
+    left: 3%;
+    width: 94%;
+    a{
+    	text-decoration:none;
+    	tspan{text-decoration:underline}
+    	&:hover,&:focus{ 			
+    		tspan{text-decoration:none;fill: #0535d2;}
+    	}
+    	&:visited {
+			tspan{fill: #167f89;}
+		}   	
+    }
+}
+.graph_m3-1_2{
+	border:3px solid black;
+	padding: 7% 3%;
+	margin-bottom:30px;	
+	background-color:white;	
+
+	display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 83%;
+    vertical-align: middle;
+}
+
+@at-root html[lang='fr'] .graph_m3-1_2{
+	padding-bottom: 83%;
+}

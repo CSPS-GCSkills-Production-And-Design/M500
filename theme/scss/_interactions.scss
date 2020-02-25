@@ -1,0 +1,452 @@
+@import "./_fonts";
+@import "../scss/_vars";
+@import "../../common/scss/utils/_utils";
+   
+@import "./_mixins.scss";
+
+/***********     Details/Summary     ***********/
+
+details summary::-webkit-details-marker{display:none;}
+.no-details details > summary::before{content:'' !important;}
+.tgl-panel.row div{padding-left:0;} 
+
+details{  
+	position:relative;
+	//margin-bottom: 15px;
+	border-bottom: .15em solid white;	
+	background-color: $details-background-color;
+	.vertical &,.horizontal &{margin-bottom:0;&[open]{margin-bottom:0;}}
+	
+	&:before,&:after{		
+		position:absolute;		
+		content:'';					
+		min-height:calc(100% - 37px);	
+		top:38px;		
+	}
+	.vertical &:before{
+		@include floating(left,$details-background-color);
+	}
+	.vertical &:after{
+		@include floating(right,$details-background-color);
+// 		z-index:-1;
+	}
+	.vertical & .tgl-panel{margin-left:30px;margin-top:30px;}
+	&[open]{		
+		margin-bottom:15px;
+		.glyphicon:before{content:"\2212";left: -0.5px;}
+	}
+	&[open],&[open] summary{
+		border:none;border-radius:0;
+	}
+	
+	summary{
+		position:relative;
+		font-weight:bold;
+		
+		color:black;
+		border:none;
+		border-radius:0;		
+		
+		min-height: 37px;
+		display:block !important;	
+
+		//line-height:27px;	
+		line-height:28px;
+		
+		&:after,&:before{			
+			position:absolute;		
+			top:0px;
+			content:'';					
+			height:100%;
+		}
+		.glyphicon{			
+
+			width: 26px;
+			height: 26px;
+			background-color: rgba(0, 0, 0, 0.35);
+			border-radius: 50%;
+			display: inline-block;
+			font-size: 12.5px;
+			margin-right: 1em;
+			color: white;
+			float: left;
+
+			&:before{						
+				width: 100%;
+				display: table-cell;
+				vertical-align: middle;
+				text-align: center;
+				position: absolute;
+				top: 7px;
+				left: 0.5px;
+			}
+		}
+
+		&:hover,&:focus{
+			text-decoration:none;
+			color:black;
+			.glyphicon{
+				background-color:black;
+			}			
+		}
+	}
+		
+	@for $i from 1 to length($toggle-colors){
+		&:nth-child(#{$i})	{
+			summary{
+				background-color:#{nth($toggle-colors,$i)};
+				.vertical &:after{
+					@include floating(right,#{nth($toggle-colors,$i)});
+				}	 
+				.vertical &:before{
+					@include floating(left,#{nth($toggle-colors,$i)});}			
+			}		
+		}
+	}	
+	
+	
+	// HORIZONTAL ACCORDIONS
+	.horizontal.col-5 & {
+		width:calc(100% / 5 - 3px);
+		
+		@include breakpoint-lt(medium){
+			ul, ol{
+				padding-left: 20px;
+			}
+			ul ul, ul ol, ol ul, ol ol, dl dl{
+				border-left: none;
+				padding-left: 0px;
+			}
+		}
+		@include breakpoint-lt(small) {    
+			width:calc(50% - 3px);
+			float:left;
+			border-bottom:3px solid white;
+		}
+		@include breakpoint-lt(xxsmall) {    
+			width:100%;
+			float:none;
+			border-bottom:3px solid white;
+		}
+	}
+	.horizontal.col-2 & {
+		width:calc(100% / 2 - 6px);
+		@include breakpoint-lt(small) {    
+			width:calc(50% - 3px);
+			float:left;
+			border-bottom:3px solid white;
+		}
+		@include breakpoint-lt(xxsmall) {    
+			width:100%;
+			float:none;
+			border-bottom:3px solid white;
+		}
+	}
+	.horizontal.col-3 & {
+		width:calc(100% / 3 - 9px);
+		@include breakpoint-lt(small) {    
+			width:calc(50%);
+			float:left;
+			border-bottom:3px solid white;
+		}
+		@include breakpoint-lt(xxsmall) {    
+			width:100%;
+			float:none;
+			border-bottom:3px solid white;
+		}
+	}
+	.horizontal.col-4 & { 
+		width:calc(100% / 4 - 12px);
+		@include breakpoint-lt(small) {    
+			width:calc(50% - 9px);
+			float:left;
+			border-bottom:3px solid white;
+		}
+		@include breakpoint-lt(xxsmall) {    
+			width:100%;
+			float:none;
+			border-bottom:3px solid white;
+		}
+	}
+	.horizontal &{
+		&[open] summary > span {
+			background-image:url('M500/accordeon_opened.png');				
+		}
+		
+		float:left;
+		margin-right:3px;	
+		summary{
+			padding-top:30px;
+			text-align:center;	
+			padding-bottom:45px;	
+			line-height:20px;				
+			>span{				
+				position: absolute;
+				bottom: 10px;
+				left: calc(50% - 13px);
+				width:27px; 
+				height:27px;
+				background-image:url('M500/accordeon_closed.png');	
+				background-size:cover;
+				border-radius:50%;
+			}	
+			&:hover > span{background-color:black;}
+		}		
+	}
+	// VERTICAL TABS and Special TABS
+	
+	.vertical_tabs &, .special_tabs &{	
+	
+		@at-root .vertical_tabs{
+			z-index:0;
+			position:relative;
+			margin-bottom:30px;
+			details{
+				background-color:transparent;
+				summary{line-height:20px;}
+			}
+		}
+		width: 100%;
+		display: inline-block;
+		position: static;
+		margin-bottom:0;		
+		
+		@include breakpoint-lt(small){
+			padding: 0;
+    		margin: 0;			
+    	}
+		@for $i from 1 to length($toggle-colors){
+			&:nth-child(#{$i})	{	
+				summary{ 
+					&:before{
+						@include breakpoint-gt(small){
+							@include floating(left,#{nth($toggle-colors,$i)});
+						}	
+					}
+				}
+			}
+		}
+
+		
+		&:last-child{border-bottom:none;}
+		&.on, &[open]{
+			padding-bottom:0;
+			summary{
+				margin-bottom:2px;
+				&:after{
+					content: '';
+					height: 100%;
+					width: 30px;						
+					position: absolute;
+					right: -30px;
+					top: 0;
+					z-index: 10000; 
+					border-width: 3px;
+					border-style: dotted solid;
+					border-right-color: white;
+					border-left-color: transparent;
+					border-top-color:black;
+					border-bottom-color:black;
+					background-color: white;	
+					@include breakpoint-lt(small){							
+						border:none;
+						background:none;
+						width:0;
+					}					
+				}
+			}
+		}			
+		summary{ 
+			text-align:right;
+			float:none;
+			display: flex !important;
+			align-items: center;
+			justify-content:flex-end;
+			&:hover, &:focus{
+				background-color:black;
+				color:white; 	
+				&:before{background-color:black;}			
+			}	
+
+
+			@include breakpoint-lt(small){
+				text-align:center;
+				justify-content:center;
+				margin: 0;
+			}
+		}
+		.tgl-panel{ 				
+			position: absolute;			
+			left: calc(25% + 18px);			
+			top:0;
+			border: 3px dotted black;
+			border-radius: 20px;
+			//padding: 10px;		
+			.tgl-content{
+				position: absolute;
+				top: 50%;	
+				transform: translateY(-50%);	
+				padding:30px;
+				@include breakpoint-lt(small){
+					position:relative;
+					transform:none;			
+					top: 0;		
+				}		
+			}
+			
+						
+			@at-root details:first-child{
+				.tgl-panel{
+					border-top-left-radius:0;
+					@include breakpoint-lt(small){border-top-left-radius:20px;}
+				}
+			}
+			@include breakpoint-lt(small){
+				position:relative;
+				left:0px;
+				top:10px;						
+				margin-bottom:20px;
+				min-height:auto !important;
+			}
+						
+		}		
+	} 
+}
+
+
+
+
+.special_tabs{
+	@include breakpoint-lt(small){
+		padding-left: 0;
+		padding-right: 0;
+		margin-left: 0;
+	}
+}
+
+			.special_tabs details{	
+				@for $i from 1 to (length($toggle-special-colors) + 1){
+					&:nth-child(#{$i})	{
+						&.on summary, &[open] summary, summary{
+							@include breakpoint-gt(xsmall){
+								&:after{
+									background-image:url(#{nth($toggle-special-urls,$i)});
+								}
+							}
+							@include breakpoint-gt(small){
+								&:before{
+									@include floating(left,#{nth($toggle-special-colors,$i)});
+								}
+							}		
+						}
+						summary{
+							background-color:#{nth($toggle-special-colors,$i)};
+						}
+						.tgl-panel{		
+							background-color:#{nth($toggle-special-colors-open,$i)};
+						}
+						&.on summary, &[open] summary, & summary:hover, & summary:focus{
+
+							@include breakpoint-gt(xsmall){
+								&:after{
+									background: 						
+									linear-gradient(
+									  rgba(0, 0, 0, 0.45), 
+									  rgba(0, 0, 0, 0.45)
+									),						
+									url(#{nth($toggle-special-urls,$i)});		
+								}
+				}	
+			}
+		}
+		
+	}
+			
+	&.on summary, &[open] summary, summary{
+		width:25%;				
+		min-height:180px;			
+
+		@include breakpoint-gt(xsmall){
+			&:after{				
+				background-repeat:no-repeat;
+				left: calc(100% + 2px);
+				position:absolute;
+				content:'';
+				width: 14.25em;
+				border:none;	 
+			}
+		}
+		@include breakpoint-lt(small){
+			width:calc(100% - 14.25em);					
+		}
+		@include breakpoint-lt(xsmall){
+			width:100%;	
+			text-align:center;						
+		}				
+	}		
+
+	.tgl-panel{				
+		left: calc(25% + 14.25em + 2px);
+		top:0;
+		border:none;								
+		
+		border-radius:0;	
+		width: calc(75% - 14.25em - 2px);		
+		@include breakpoint-lte(small){
+			width:100%;
+			left:0;			
+		}
+		.tgl-content{
+			padding:4.5em 3em 3em 3em;
+			@include breakpoint-lt(small){
+				padding: 1.5em 2em 1em 2em;	
+			}
+		}
+	}	
+	&.on summary, &[open] summary, & summary:hover, & summary:focus{
+		color:white;
+		background-color:black;
+
+		&:before{
+			background-color:black !important;
+		}
+		@include breakpoint-lt(xsmall){
+			&:after{background:none;width:0;}
+		}
+		
+	}										
+}
+
+// ------------------LOM
+[data-lom-element="accordion"]{
+	details,summary{
+		margin-bottom:auto;
+		&:before,&:after{content:'';}
+	}
+}
+
+
+[data-lom-element="accordion"].vertical details summary {
+	.LOM-editable{
+		padding-left:30px;
+		&:before{
+			content: '+';
+			position: absolute;
+			display: block;
+			width: 28px;
+			height: 28px;
+			background-color: olive;
+			margin-top: 0px;
+			border-radius: 19px;
+			color: white;
+			font-size: 21px;
+			font-weight: 600;
+			text-align: center;
+			}
+		}
+	&:hover,&:focus{
+		.LOM-editable:before{
+			background-color:black;
+		}
+	}
+}
