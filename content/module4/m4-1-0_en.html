@@ -1,133 +1,271 @@
 <!-- top banner with side-by-side underneath -->
 <section class="row">
-	<section class="col-md-12 LOM-frame " id="LOMfr_1">
-		<section class="LOM-element placeholder default " data-lom-element="text" id="LOM_el_1" data-lom-subtype="title">
-			<h1>
-				<div class="LOM-editable" id="LOM-edit-1">
-					<p>Introduction</p>
-				</div>
-			</h1>
-			<!-- default Object, spawns an object picker --> 
-			
-		</section>
-		<section class="LOM-element " data-lom-element="text" id="LOM_el_2"> 
-			<!-- This element is a plain Text area -->
-			<div class="LOM-editable" id="LOM-edit-2">
-				<p>As previously stated, you will play the part of a contracting officer having to deal with different procurement scenarios.</p>
-				<p>First, however, it is important to understand the following three key policies and their impact on all procurement decisions made by government departments and their procurement personnel:</p>
-			</div>
-		</section>
-	</section>
+    <style>
+    /*! CSS Used from: https://ppapp.csps-efpc.gc.ca/ProdContent/cninv000000000016452/theme/theme.css */
+    .bubble {
+        border: 3px dotted #000;
+        padding: 1em;
+        border-radius: 15px;
+    }
+
+    .snap-pyramid {
+        min-width: 850px;
+    }
+
+    .snap-pyramid figcaption {
+        height: 1px;
+        display: block;
+        overflow: hidden;
+    }
+
+    .snap-pyramid details {
+        margin: 0px 0px 0px 0px;
+    }
+
+    .snap-pyramid details summary {
+        position: relative;
+        border: none;
+        border: 0;
+        box-shadow: none;
+        padding: 0px 0px 0px 0px;
+        margin: 0px 0px 0px 0px !important;
+        border-radius: 0px;
+        background-color: transparent;
+        height: 80px;
+        color: black;
+    }
+
+    .snap-pyramid details {
+        background-color: #fff;
+
+    }
+
+    .snap-pyramid details summary span {
+        background-color: white;
+        border: 1px #ccc solid;
+        margin-left: 215px;
+        position: absolute;
+        margin-top: 20px;
+        padding: 0px 5px;
+    }
+
+    .snap-pyramid details summary:hover {
+        border: none;
+        -webkit-box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.2);
+        box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    .snap-pyramid details summary:before {
+        content: '';
+        display: block;
+        position: absolute;
+        height: 0px;
+        padding: 0px;
+        top: 0px;
+    }
+
+    .snap-pyramid details summary:after {
+        display: none;
+    }
+
+    .snap-pyramid details summary::-webkit-details-marker {
+        display: none;
+    }
+
+    .snap-pyramid details:nth-of-type(1)>summary:before {
+        border-top: 0px;
+        border-bottom: 80px solid #A2B63B;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        width: 100px;
+        margin-left: 150px;
+    }
+
+    .snap-pyramid details:nth-of-type(2)>summary:before {
+        border-top: 0px;
+        border-bottom: 80px solid #CCD793;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        width: 200px;
+        margin-left: 100px;
+    }
+
+    .snap-pyramid details:nth-of-type(3)>summary:before {
+        border-top: 0px;
+        border-bottom: 80px solid #FDBE12;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        width: 300px;
+        margin-left: 50px;
+    }
+
+    .snap-pyramid details:nth-of-type(4)>summary:before {
+        border-top: 0px;
+        border-bottom: 80px solid #1BB1BF;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        width: 400px;
+        margin-left: 0px;
+    }
+    </style>
+    <section class="col-md-12 LOM-frame" id="LOMfr_1">
+        <section class="LOM-element placeholder default" data-lom-element="text" id="LOM_el_1" data-lom-subtype="title">
+            <h1>
+                <div class="LOM-editable" id="LOM-edit-1"><p>Introduction</p></div>
+            </h1>
+            <!-- default Object, spawns an object picker -->
+        </section>
+        <section class="LOM-element" data-lom-element="text" id="LOM_el_2">
+            <!-- This element is a plain Text area -->
+            <div class="LOM-editable" id="LOM-edit-2"><p>As previously stated, you will play the part of a contracting officer having to deal with different procurement scenarios.</p><p>First, however, it is important to understand the following three key policies and their impact on all procurement decisions made by government departments and their procurement personnel:</p></div>
+        </section>
+    </section>
 </section>
 <section class="row">
-	<section class="col-md-12 LOM-frame " id="LOMfr_2">
-		<section class="LOM-element " data-lom-element="text" id="LOM_el_3">
-			<div class="instructions">
-				<div class="circle-bundle click">
-					<div class="LOM-editable" id="LOM-edit-3">
-						<p><strong>Select to expand each of the following to learn more.</strong></p>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="LOM-element " data-lom-element="custom" id="LOM_el_4">
-			<div class="clearfix"></div>
-			<div class="accordion vertical">
-				<details class="acc-group">
-					<summary class="wb-toggle tgl-tab" data-toggle="{&quot;parent&quot;: &quot;.accordion&quot;, &quot;group&quot;: &quot;.acc-group&quot;}"><span class="glyphicon glyphicon-plus"></span>
-						<div class="LOM-editable" id="LOM-edit-14">Policy on Investment Planning&nbsp;– Assets and Acquired Services</div>
-					</summary>
-					<div class="tgl-panel">
-						<div class="LOM-editable" id="LOM-edit-4">
-							<p>Departmental investment planning is the function of allocating and reallocating resources to new and existing assets and acquired services that are essential to program delivery. Departmental investment planning is a key element in achieving value for money and sound stewardship.</p>
-							<p>Under the investment planning lens, client needs are considered over a long-term horizon. Unless there is sustained investment in its asset base, a department’s ability to deliver on its mandate erodes over time. The investments that are proposed in such a plan are carefully chosen to maximize capabilities within the available resources that are allocated in a manner that clearly supports program outcomes and government priorities. Integrated investment planning is a critical activity that ensures the government’s ongoing ability to deliver the highest quality service to Canadians.</p>
-						</div>
-						<div class="well">
-							<div class="LOM-editable" id="LOM-edit-7">
-								<p><strong>Investment Planning Context</strong> sets the stage for a department’s proposed investment decisions by outlining:</p>
-								<ul>
-									<li>Who We Are and What We Do</li>
-									<li>The Assets We Use to Support Our Programs</li>
-									<li>Our Investment Requirements</li>
-									<li>Investment Funding available to the Department</li>
-									<li>How We Make Investment Decisions</li>
-								</ul>
-							</div>
-						</div>
-						<div class="well">
-							<div class="LOM-editable" id="LOM-edit-8">
-								<p><strong>Investment Decisions</strong> specify the investment vision of the department for the next five years and beyond by describing:</p>
-								<ul>
-									<li>How We Will Invest Our Resources in the Next Five Fiscal Years</li>
-									<li>How We Will Address Risks related to the Integrated Investment Planning</li>
-									<li>How We Plan to Measure Our Performance Relative to the Integrated Investment Planning</li>
-									<li>How We Will Invest Our Resources beyond the Five Fiscal Years.</li>
-								</ul>
-							</div>
-						</div>
-						<div class="LOM-editable" id="LOM-edit-9">
-							<p><a href="#">Policy on Investment Planning&nbsp;– Assets and Acquired Services</a></p>
-						</div>
-					</div>
-				</details>
-				<details class="acc-group">
-					<summary class="wb-toggle tgl-tab" data-toggle="{&quot;parent&quot;: &quot;.accordion&quot;, &quot;group&quot;: &quot;.acc-group&quot;}"><span class="glyphicon glyphicon-plus"></span>
-						<div class="LOM-editable" id="LOM-edit-15">Policy Framework for Management of Assets and Acquired Services</div>
-					</summary>
-					<div class="tgl-panel">
-						<div class="LOM-editable" id="LOM-edit-10">
-							<p>The <a href="#">Policy Framework for the Management of Assets and Acquired Services</a> and its associated policy instruments set the direction for the management of assets and acquired services to ensure that the conduct of these activities provides value for money and demonstrates sound stewardship in program delivery. The policy framework establishes the principles that should govern the work of the procurement, materiel management, and real property communities; these principles are in keeping with the <a href="#">Management Accountability Framework</a> and are grounded in the <a href="#">Values and Ethics Code for the Public Sector</a>.</p>
-							<p>The policy framework centres on the characteristics of an effective departmental management framework and the broad principles that should guide decision making rather than provide prescriptive, transaction-focused direction.</p>
-							<p>Deputy heads are accountable to their respective ministers and to Treasury Board for the management of departmental assets and acquired services. They are responsible for implementing an effective management framework, including departmental procedures, processes and systems that demonstrate how the department is managing based on the principles of procurement best practices.</p>
-							<p>The policy framework also identifies the key statutory, regulatory and policy instruments such as the <a href="#">Financial Administration Act</a>, the <a href="#">Government Contracts Regulations</a>, and the <a href="#">Common Services Policy</a> that form the basis for the government’s management practices and controls.</p>
-						</div>
-					</div>
-				</details>
-				<details class="acc-group">
-					<summary class="wb-toggle tgl-tab" data-toggle="{&quot;parent&quot;: &quot;.accordion&quot;, &quot;group&quot;: &quot;.acc-group&quot;}"><span class="glyphicon glyphicon-plus"></span>
-						<div class="LOM-editable" id="LOM-edit-16">Contracting Policy</div>
-					</summary>
-					<div class="tgl-panel">
-						<div class="LOM-editable" id="LOM-edit-11">
-							<p>The <a href="#">Contracting Policy</a> addresses key applicable statutes and regulations, includes general policy and procedural requirements, and provides rules for bidding and selection, contract awarding, definitions for significant terms, and annual reporting requirements for contracting activities. It also deals with specific issues associated with goods, services and construction contracts, and contract administration.</p>
-							<p>Contracting officers should be aware of a number of key provisions specifically addressed in this policy, focusing on the following topics:</p>
-							<ul>
-								<li>Acceptable Bonding Companies (Appendix&nbsp;L)</li>
-								<li>Advance Contract Award Notices (Articles&nbsp;10.7.13–10.7.17)</li>
-								<li>Bidding and Selection (Article&nbsp;10)</li>
-								<li>Conflict of Interest (Articles&nbsp;16.11.5–16.11.7)</li>
-								<li>Contract Administration (Article&nbsp;12)</li>
-								<li>Contract Award (Article&nbsp;11)</li>
-								<li>Contract Splitting (Article&nbsp;11.2.7)</li>
-								<li>Contracting for Advertising and Public Opinion Research Services (Article&nbsp;16.13)</li>
-								<li>Contracting for Legal Services (Article&nbsp;4.1.10)</li>
-								<li>Contracting with Former Public Servants in Receipt of a Pension or a Lump Sum Payment (Article&nbsp;16.8)</li>
-								<li>Criminal Code (Article&nbsp;12.5.1)</li>
-								<li>Employer-Employee Relationships (Article&nbsp;16.3)</li>
-								<li>Federal Contractors’ Program for Employment Equity (Appendix&nbsp;D)</li>
-								<li>Government Security (Articles&nbsp;11.3 and&nbsp;12.5.2)</li>
-								<li>Lobbyists and Contracting (Appendix&nbsp;M)</li>
-								<li>Official Languages (Article&nbsp;8.5 and Appendix&nbsp;F)</li>
-								<li>Temporary Help Services (Appendix&nbsp;I)</li>
-							</ul>
-						</div>
-					</div>
-				</details>
-			</div>
-		</section>
-		<section class="LOM-element " data-lom-element="text" id="LOM_el_5">
-			<div class="instructions">
-				<div class="circle-bundle warning">
-					<div class="LOM-editable" id="LOM-edit-5">
-						<p>Note: Other policies, regulations and directives will also apply in particular cases. They will be mentioned separately for each scenario, when necessary. In addition, to increase clarity, you will notice that some notions that were addressed in previous modules are repeated in the feedback information.</p>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="LOM-element" data-lom-element="custom" id="LOM_el_6">
-			<button class="pick_scenario mrgn-tp-md" onclick="javasctip:window.changePage('m4-1-2')">
-			<div class="LOM-editable" id="LOM-edit-19">Go to the Scenarios</div>
-			</button>
-		</section>
-	</section>
+    <section class="col-md-12 LOM-frame" id="LOMfr_2">
+        <section class="LOM-element" data-lom-element="text" id="LOM_el_3">
+            <div class="instructions">
+                <div class="circle-bundle click">
+                    <div class="LOM-editable" id="LOM-edit-3"><p><strong>Select to expand each of the following to learn more.</strong></p></div>
+                </div>
+            </div>
+        </section>
+        <section class="LOM-element" data-lom-element="image" id="LOM_el_7">
+            <figure class="snap-pyramid">
+                <figcaption>Each item is part of a pyramid, from top to bottom.</figcaption>
+                <details>
+                    <summary class="wb-details"><span>Laws</span></summary>
+                    <section class="bubble">
+                        <p><strong>Laws</strong></p>
+                        <ul>
+                            <li>Financial Administration Act</li>
+                            <li>Department of Public Works and Government Services Act</li>
+                            <li>Other departmental acts</li>
+                        </ul>
+                        <p><strong>Constitutionally protected</strong></p>
+                        <ul>
+                            <li>Comprehensive Land Claims Agreements</li>
+                        </ul>
+                        <p><strong>Documents that are treated like laws</strong></p>
+                        <ul>
+                            <li>Trade agreements</li>
+                            <li>Court decisions</li>
+                        </ul>
+                    </section>
+                </details>
+                <details>
+                    <summary class="wb-details"><span>Regulations</span></summary>
+                    <section class="bubble">
+                        <p>Government Contracts Regulations</p>
+                    </section>
+                </details>
+                <details>
+                    <summary class="wb-details"><span>Policies, Directives, Standards &amp; Guidelines</span></summary>
+                    <section class="bubble">
+                        <p><strong>Treasury Board policy instruments</strong></p>
+                        <ul>
+                            <li>Contracting Policy</li>
+                            <li>Policy on the Planning and Management of Investments</li>
+                            <li>Policy on Decision Making in Limiting Contractor Liability in Crown Procurement Contracts</li>
+                            <li>Policy on Green Procurement</li>
+                            <li>Directive on Government Contracts, Including Real Property Leases, in the Nunavut Settlement Area</li>
+                            <li>Guidelines on the Proactive Disclosure of Contracts</li>
+                        </ul>
+                        <p><strong>Other government-wide </strong><strong>policies</strong></p>
+                        <ul>
+                            <li>Procurement Strategy for Aboriginal Businesses</li>
+                            <li>Policy on Title to Intellectual Property Arising Under Crown Procurement Contracts</li>
+                            <li>Federal Contractor Program</li>
+                        </ul>
+                    </section>
+                </details>
+                <details>
+                    <summary class="wb-details"><span>Departmental policies, procedures and tools</span></summary>
+                    <section class="bubble">
+                        <p><strong>For example:</strong> PSPC Supply Manual, Requisition checklist, Security Requirements Check List, etc.</p>
+                    </section>
+                </details>
+            </figure>
+        </section><section class="LOM-element" data-lom-element="text" id="LOM_el_8">
+            <!-- This element is a plain Text area -->
+            <div class="LOM-editable" id="LOM-edit-4"><p><strong><a><strong>This graphic features many of the key instruments of the procurement legal and policy framework, but not all of them</strong></a></strong></p>
+</div>
+        </section>
+        <section class="LOM-element" data-lom-element="custom" id="LOM_el_4">
+            <div class="accordion horizontal col-5" style="height: auto;">
+                <!-- <div class="accordion vertical_tabs"> -->
+                <details >
+                    <summary style="height: 95px;" class="wb-details">
+                        <div class="LOM-editable" id="LOM-edit-12">Act</div>
+                        <span class="accordion_closed"></span>
+                    </summary>
+                    <div class="tgl-panel" style="min-height: 0px; height: 360px;">
+                        <div class="tgl-content">
+                            <div class="LOM-editable" id="LOM-edit-13"><p><strong>Financial Administration Act</strong><br><br>Provides the legal framework for the collection and expenditure of public funds, including the contracting practices of PSPC and its clients.</p></div>
+                        </div>
+                    </div>
+                </details>
+                <details>
+                    <summary style="height: 95px;" class="wb-details">
+                        <div class="LOM-editable" id="LOM-edit-21">Regulation</div>
+                        <span class="accordion_closed"></span>
+                    </summary>
+                    <div class="tgl-panel" style="min-height: 0px; height: 360px;">
+                        <div class="tgl-content">
+                            <div class="LOM-editable" id="LOM-edit-20"><p><strong>Government Contract Regulations</strong></p><p>Contains conditions of contract entry, and bid and contract security.</p></div>
+                        </div>
+                    </div>
+                </details>
+                <details >
+                    <summary style="height: 95px;" class="wb-details">
+                        <div class="LOM-editable" id="LOM-edit-19">Agreement</div>
+                        <span class="accordion_closed"></span>
+                    </summary>
+                    <div class="tgl-panel" style="min-height: 0px; height: 360px;">
+                        <div class="tgl-content">
+                            <div class="LOM-editable" id="LOM-edit-18"><p style="margin-left:11px"><strong>North American Free Trade Agreement</strong></p><p style="margin-left:11px">Contains procurement provisions that focus on achieving greater competition for, and transparency in, government procurement, eliminating the protection of domestic products or suppliers or discrimination among foreign products or suppliers.</p></div>
+                        </div>
+                    </div>
+                </details>
+                <details >
+                    <summary style="height: 95px;" class="wb-details">
+                        <div class="LOM-editable" id="LOM-edit-17">Policy</div>
+                        <span class="accordion_closed"></span>
+                    </summary>
+                    <div class="tgl-panel" style="min-height: 0px; height: 360px;">
+                        <div class="tgl-content">
+                            <div class="LOM-editable" id="LOM-edit-16"><p><strong>Treasury Board Contracting Policy </strong></p><p>Explains the requirements to acquire goods and services and to carry out construction in a manner that enhances access, competition and fairness and results in best value.</p></div>
+                        </div>
+                    </div>
+                </details>
+                <details>
+                    <summary style="height: 95px;" class="wb-details">
+                        <div class="LOM-editable" id="LOM-edit-14">Directive</div>
+                        <span class="accordion_closed"></span>
+                    </summary>
+                    <div class="tgl-panel" style="min-height: 0px; height: 360px;">
+                        <div class="tgl-content">
+                            <div class="LOM-editable" id="LOM-edit-15"><p><strong>Directive on Government Contracts, Including Real Property Leases, in the Nunavut Settlement Area</strong></p><p>Ensures that government contracting in the Nunavut Settlement Area will meet the Government of Canada’s obligations under Article 24 of the Nunavut Agreement.</p></div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </section>
+        <div class="clearfix"></div>
+        <section class="LOM-element" data-lom-element="text" id="LOM_el_5">
+            <div class="instructions">
+                <div class="circle-bundle warning">
+                    <div class="LOM-editable" id="LOM-edit-5"><p>Note: Other policies, regulations and directives will also apply in particular cases. They will be mentioned separately for each scenario, when necessary. In addition, to increase clarity, you will notice that some notions that were addressed in previous modules are repeated in the feedback information.</p></div>
+                </div>
+            </div>
+        </section>
+        <section class="LOM-element" data-lom-element="custom" id="LOM_el_6">
+            <button class="pick_scenario mrgn-tp-md" onclick="javasctip:window.changePage('m4-1-2')">
+                <div class="LOM-editable" id="LOM-edit-19">
+                    <p>Go to the Scenarios</p>
+                </div>
+            </button>
+        </section>
+        
+    </section>
 </section>
