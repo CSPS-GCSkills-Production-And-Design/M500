@@ -949,6 +949,124 @@ html[lang=fr]{
 
 
 ////////////////////////
+//    Pyramid       ////
+////////////////////////
+
+
+    .constitution {
+    position:relative;
+    font-weight: bold;
+    margin-left:175px;
+    font-size: 16px
+}
+    .bubble {
+        border: 3px dotted #000;
+        padding: 1em;
+        border-radius: 15px;
+    }
+
+    .snap-pyramid {
+        min-width: 850px;
+    }
+
+    .snap-pyramid figcaption {
+        height: 1px;
+        display: block;
+        overflow: hidden;
+    }
+
+    .snap-pyramid details {
+        margin: 0px 0px 0px 0px;
+    }
+
+    .snap-pyramid details summary {
+        position: relative;
+        border: none;
+        border: 0;
+        box-shadow: none;
+        padding: 0px 0px 0px 0px;
+        margin: 0px 0px 0px 0px !important;
+        border-radius: 0px;
+        background-color: transparent;
+        height: 80px;
+        color: black;
+    }
+
+    .snap-pyramid details {
+        background-color: #fff;
+
+    }
+
+    .snap-pyramid details summary span {
+        background-color: white;
+        border: 1px #ccc solid;
+        margin-left: 215px;
+        position: absolute;
+        margin-top: 20px;
+        padding: 0px 5px;
+    }
+
+    .snap-pyramid details summary:hover {
+        border: none;
+        -webkit-box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.2);
+        box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    .snap-pyramid details summary:before {
+        content: '';
+        display: block;
+        position: absolute;
+        height: 0px;
+        padding: 0px;
+        top: 0px;
+    }
+
+    .snap-pyramid details summary:after {
+        display: none;
+    }
+
+    .snap-pyramid details summary::-webkit-details-marker {
+        display: none;
+    }
+
+    .snap-pyramid details:nth-of-type(1)>summary:before {
+        border-top: 0px;
+        border-bottom: 80px solid #A2B63B;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        width: 100px;
+        margin-left: 150px;
+    }
+
+    .snap-pyramid details:nth-of-type(2)>summary:before {
+        border-top: 0px;
+        border-bottom: 80px solid #CCD793;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        width: 200px;
+        margin-left: 100px;
+    }
+
+    .snap-pyramid details:nth-of-type(3)>summary:before {
+        border-top: 0px;
+        border-bottom: 80px solid #FDBE12;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        width: 300px;
+        margin-left: 50px;
+    }
+
+    .snap-pyramid details:nth-of-type(4)>summary:before {
+        border-top: 0px;
+        border-bottom: 80px solid #1BB1BF;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        width: 400px;
+        margin-left: 0px;
+    }
+    
+
+////////////////////////
 //    Scenarios     ////
 ////////////////////////
 
