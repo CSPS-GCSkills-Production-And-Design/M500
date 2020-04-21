@@ -49,6 +49,15 @@ h1 div p{
     vertical-align: middle;
 }
 
+.qs-answer input {
+    display: block;
+    float: left;
+}
+
+.qs-elearning-activity .qs-answer .LOM-editable, .qs-elearning-activity .qs-answer form {
+    display: grid!important;
+}
+
 label {
     display: inline-block;
     max-width: 100%;
