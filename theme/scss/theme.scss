@@ -26,6 +26,8 @@ h1,h2,h3{
 
 /* CUSTOM */
 
+
+
 h1 div p{
 	font-size:32px;
 	@include breakpoint-lt(medium){margin-top:0;padding-top:0;}
@@ -54,8 +56,8 @@ h1 div p{
     float: left;
 }
 
-.qs-elearning-activity .qs-answer .LOM-editable, .qs-elearning-activity .qs-answer form {
-    display: grid!important;
+.qs-elearning-activity .qs-answer div, .qs-elearning-activity .qs-answer form {
+    display: inline;
 }
 
 label {
