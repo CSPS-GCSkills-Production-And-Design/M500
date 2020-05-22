@@ -26,7 +26,9 @@ h1,h2,h3{
 
 /* CUSTOM */
 
-
+.qs-elearning-activity .qs-exercise .qs-answers p > * {
+    display: inline;
+}
 
 h1 div p{
 	font-size:32px;
@@ -62,7 +64,7 @@ h1 div p{
 
 label {
     display: inline-block;
-    max-width: 100%;
+    width: 100%;
     margin-bottom: 10px!important;
     font-weight: bold;
 	font-size: 15px;
