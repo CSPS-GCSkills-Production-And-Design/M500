@@ -30,6 +30,20 @@ h1,h2,h3{
     display: inline;
 }
 
+.qs-answers p.select:after {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    content: '';
+    background-image: url(M500/select.png);
+    display: block;
+    background-repeat: no-repeat;
+    right: 20px;
+    top: 30px;
+    background-size: contain;
+    pointer-events: none;
+}
+
 h1 div p{
 	font-size:32px;
 	@include breakpoint-lt(medium){margin-top:0;padding-top:0;}
