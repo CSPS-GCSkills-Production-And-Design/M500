@@ -861,9 +861,15 @@ ul ul, ul ol, ol ul, ol ol, dl dl{
 	li{list-style-type:square;}
 }
 
-.H_sidebar,.H_sidebar_third{
+.H_sidebar div p strong, .H_sidebar div p{
 	font-family:"Aleo-Light";
-	font-size:1.3em;
+	font-size: 20px;
+	font-weight:bold;
+}
+
+.H_sidebar_third p {
+	font-family:"Aleo-Light";
+	font-size: 1em;
 	font-weight:bold;
 }
 
