@@ -77,7 +77,7 @@ h1 div p{
 }
 
 label {
-    display: inline-block;
+    display: flex;
     width: 100%;
     margin-bottom: 10px!important;
     font-weight: bold;
@@ -93,6 +93,10 @@ label {
     height: 10px;
     display: inline-block;
     margin-right: 0.5em;
+}
+
+.H_sidebar + .content div p{
+	margin-left: 3.2em;
 }
 
 /////////////////////////////////////
@@ -865,6 +869,7 @@ ul ul, ul ol, ol ul, ol ol, dl dl{
 	font-family:"Aleo-Light";
 	font-size: 20px;
 	font-weight:bold;
+	display: table-cell;
 }
 
 .H_sidebar_third p {
