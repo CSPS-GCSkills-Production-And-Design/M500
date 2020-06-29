@@ -619,7 +619,7 @@ button[class^='qs-'], input[type="button"][class^='qs-'], button.pick_scenario, 
         display: table-cell; }
       /* line 236, scss/_quiz.scss */
       .qs-elearning-activity .qs-exercise .qs-answers p > label {
-        padding-left: 10px;
+        /*padding-left:10px;*/
         font-weight: normal;
         vertical-align: middle; }
     /* line 243, scss/_quiz.scss */

@@ -233,7 +233,7 @@ button[class^='qs-'], input[type="button"][class^='qs-'], button.pick_scenario, 
 			p{		
 				display:table;	
 				> * {display:table-cell;}
-				> label{padding-left:10px;font-weight:normal;vertical-align:middle;}
+				> label{/*padding-left:10px;*/font-weight:normal;vertical-align:middle;}
 			}
 		}
 
