@@ -26,10 +26,6 @@ h1,h2,h3{
 
 /* CUSTOM */
 
-.qs-elearning-activity .qs-exercise .qs-answers p > * {
-    display: inline;
-}
-
 .qs-answers p.select:after {
     position: absolute;
     width: 30px;
@@ -38,8 +34,6 @@ h1,h2,h3{
     background-image: url(M500/select.png);
     display: block;
     background-repeat: no-repeat;
-    right: 20px;
-    top: 30px;
     background-size: contain;
     pointer-events: none;
 }
@@ -97,6 +91,11 @@ label {
 
 .H_sidebar + .content div p{
 	margin-left: 3.2em;
+}
+
+.select label {
+	max-width: 100%;
+	width: 0%;
 }
 
 /////////////////////////////////////
