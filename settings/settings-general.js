@@ -16,7 +16,7 @@ define({
 	],
 	
 	"googleAnalyticsID": "UA-138896674-2",
-	//navigationMode:3,
-  "editMode": true
+	
+	"editMode": true
 });
  

@@ -70,6 +70,11 @@ define([
 			$('#current_module').html(currentModule);
 			
 		}
+		$(".qs-navgroup").find("button")
+			.removeClass("align-right")
+			.removeClass("ico-QS-right")
+			.removeClass("ico-QS-left")
+			.removeClass("snap-sm");
 
 	}
 
