@@ -2612,7 +2612,7 @@ details {
     /* line 278, scss/_interactions.scss */
     .vertical_tabs details .tgl-panel, .special_tabs details .tgl-panel {
       position: absolute;
-      left: calc(25% + 18px);
+      left: calc(33% + 18px);
       top: 0;
       border: 3px dotted black;
       border-radius: 20px; }
