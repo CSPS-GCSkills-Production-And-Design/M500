@@ -2504,7 +2504,8 @@ fCe('type-5 → test for highlite all mode...');
 								for(iii=0;iii<(myAnswerId).split(',').length;iii++){
 									
 									$inputLabel=$('label[for='+(myAnswerId).split(',')[iii]+']');
-									answerText=($inputLabel.length>0)?$inputLabel.text():$("#"+(myAnswerId).split(',')[iii]).parent("label").text();
+									answerText=($inputLabel.length>0)?$.trim($inputLabel.text()):$.trim($("#"+(myAnswerId).split(',')[iii]).parent("label").text());
+									answerText=answerText.replace(" , ", ", ");
 									appendBuffer += answerText+(((myAnswerId).split(',').length===iii+1)?"":", ");
 								}
 																							  
